@@ -12,7 +12,7 @@ const style = {
 
 const Header = () => {
    return <div style={style}>
-           <label style={{color:"white"}}>Food Search</label>
+            <label style={{color:"white"}}>Food Search</label>
           </div>;
 }
 
