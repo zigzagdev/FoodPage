@@ -2,7 +2,7 @@ import React from "react";
 
 const style = {
  height: 100,
- backgroundColor: 'azure',
+ backgroundColor: '#0033FF',
  textAlign: "right",
  minWidth:'1024px',
  paddingRight: 100,
@@ -12,7 +12,7 @@ const style = {
 
 const Header = () => {
    return <div style={style}>
-            Food Search
+           <label style={{color:"white"}}>Food Search</label>
           </div>;
 }
 
