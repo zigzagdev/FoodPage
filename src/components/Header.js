@@ -24,7 +24,6 @@ const style2 = {
 
 }
 
-
 const Header = () => {
    return<Fragment>
            <div style={pstyle}>
@@ -35,7 +34,7 @@ const Header = () => {
                    <label style={{color:"white"}}>Test</label>
                </div>
            </div>
-         </Fragment>;
-}
+         </Fragment>
+};
 
 export default Header;
