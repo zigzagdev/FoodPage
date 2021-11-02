@@ -19,7 +19,7 @@ const SignUp = () => {
     const [password,setPassword] = useState('');
     const handleSubmit = (e) => {
         e.preventDefault();
-        const{email,password} = event.target.elements;
+        const{email,password} = e.target.elements;
         auth.createUserWithEmailAndPassword(email.value,password.value)
     };
     const handleChangeEmail = (e) => {
