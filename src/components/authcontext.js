@@ -1,4 +1,4 @@
-import {useContext,useState,createContext} from "react";
+import {useContext,useState,createContext,useEffect} from "react";
 import {auth} from '../firebase'
 
 const AuthContext = createContext();
@@ -12,7 +12,16 @@ export function AuthProvider({ children }) {
 
     const value = {
         user,
-    }
-}
+    };
 
-return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+    useEffect(() => {
+        const unsubscribed = auth.onAuthStateChanged((user) => {
+            console.log(user);
+            setUser(user);
+        });
+        return () => {
+            unsubscribed();
+        };
+    }, []);
+    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
