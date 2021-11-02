@@ -1,5 +1,7 @@
 import React from "react";
 import {useState} from "react";
+import {auth} from  '../firebase';
+
 
 const style = {
   marginTop:40,
@@ -17,7 +19,8 @@ const SignUp = () => {
     const [password,setPassword] = useState('');
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email,password);
+        const{email,password} = event.target.elements;
+        auth.createUserWithEmailAndPassword(email.value,password.value)
     };
     const handleChangeEmail = (e) => {
         setEmail(e.currentTarget.value);
