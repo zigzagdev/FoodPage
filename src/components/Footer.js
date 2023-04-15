@@ -1,30 +1,30 @@
-import React from "react";
-import {Fragment} from "react";
+import React, {Fragment} from "react";
+
 
 const style = {
-    backgroundColor:"black",
-    position:"absolute",
+    backgroundColor: "black",
+    position: "absolute",
     bottom: 0,
-    width:"100%",
-    height:80,
+    width: "100%",
+    height: 80,
 }
 const font = {
-    color:"white",
-    textAlign:"right",
+    color: "white",
+    textAlign: "right",
     marginRight: 40,
-    marginTop : 30,
+    marginTop: 30,
 
 }
 
 
 const Footer = () => {
-    return<Fragment>
-            <div style={style}>
-              <div style={font}>
+    return <Fragment>
+        <div style={style}>
+            <div style={font}>
                 Matthew - Masa
-              </div>
             </div>
-          </Fragment>
+        </div>
+    </Fragment>
 }
 
 export default Footer;
